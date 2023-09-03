@@ -7,16 +7,6 @@ public class JobField {
     private static int nextId = 1;
     private String value;
 
-    public JobField() {
-        id = nextId;
-        nextId++;
-    }
-
-    public JobField(String value) {
-        this();
-        this.value = value;
-    }
-
     // Custom toString, equals, and hashCode methods:
 
     @Override

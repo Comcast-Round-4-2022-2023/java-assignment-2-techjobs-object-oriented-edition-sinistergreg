@@ -18,13 +18,9 @@ public class JobTest {
 
     @Before
     public void setUp() {
+        // Reset the nextId counter to 1 before each test
+        Job.resetNextId();
         testJob1 = new Job("Software Engineer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Full Time"), new CoreCompetency("Java"));
-    }
-
-    @Before
-    public void createJobObjects() {
-        testJob1 = new Job(); // Create testJob1 using the constructor
-        testJob2 = new Job(); // Create testJob2 using the constructor
     }
 
     @Test

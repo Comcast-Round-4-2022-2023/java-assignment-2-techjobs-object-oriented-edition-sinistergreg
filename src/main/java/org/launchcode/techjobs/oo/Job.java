@@ -17,8 +17,13 @@ public class Job {
     //  the 'id' field.
     // Constructor to initialize a unique ID
     public Job() {
+        // Initialize the ID with the current nextId value
         id = nextId;
+
+        // Increment the nextId counter for the next job
         nextId++;
+
+        // Initialize other fields here
     }
 
     // Constructor to initialize 5 fields, calls first constructor to initialize id field
@@ -31,13 +36,17 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    public static void resetNextId() {
+        nextId = 1;
+    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
     // Custom equals and hashCode methods
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Job)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Job job = (Job) o;
         return id == job.id;
     }
