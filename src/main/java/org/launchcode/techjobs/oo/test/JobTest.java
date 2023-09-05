@@ -19,7 +19,7 @@ public class JobTest {
     @Before
     public void setUp() {
         // Reset the nextId counter to 1 before each test
-        Job.resetNextId();
+//        Job.resetNextId();
         testJob1 = new Job("Software Engineer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Full Time"), new CoreCompetency("Java"));
     }
 

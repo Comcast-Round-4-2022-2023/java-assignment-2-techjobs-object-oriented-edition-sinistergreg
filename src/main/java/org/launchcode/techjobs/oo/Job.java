@@ -18,7 +18,7 @@ public class Job {
     // Constructor to initialize a unique ID
     public Job() {
         // Initialize the ID with the current nextId value
-        id = nextId;
+        this.id = nextId;
 
         // Increment the nextId counter for the next job
         nextId++;
@@ -36,9 +36,9 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    public static void resetNextId() {
-        nextId = 1;
-    }
+//    public static void resetNextId() {
+//        nextId = 1;
+//    }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
